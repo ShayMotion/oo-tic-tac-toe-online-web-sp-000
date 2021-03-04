@@ -101,8 +101,8 @@ end
     !won? && full? ? true : false
   end
 
-   def over?
-    won? || draw? || full? ? true : false
+  def over?
+    won? || draw? ? true : false
   end
 
    def winner
