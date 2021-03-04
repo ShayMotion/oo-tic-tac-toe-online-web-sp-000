@@ -97,8 +97,13 @@ end
     @board.all? { |i| i =="X" || i == "O"}
   end
 
-   def draw?
-    !won? && full? ? true : false
+  def draw?
+    result_won = won?
+    if full? && result_won == false
+      true
+    else
+      false
+    end
   end
 
   def over?
