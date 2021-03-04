@@ -94,7 +94,9 @@ class TicTacToe
 end
 
    def full?
-    @board.all? { |i| i =="X" || i == "O"}
+    @board.all? do |el|
+      position_taken?(@board.index(el))
+    end
   end
 
   def draw?
